@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Vòng lặp</title>
+    <title>Js BTVN Buổi 2, 3</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -25,80 +25,139 @@
     <main>
       <!-- bai 1 -->
       <div class="container">
-        <h2>B1: Tim so nguyen duong nho nhat sao cho 1+2+3...+n>10000</h2>
+        <h2>B1: Tính tiền lương nhân viên</h2>
         <div class="mb-3">
-          <button class="btn btn-primary" onclick="timSoNguyenDuongN()">
-            Tìm số N
+          <label for="soNgay" class="form-label"
+            >Nhập số ngày (lương mỗi ngày = 100.000)</label
+          >
+          <input type="text" class="form-control" id="soNgay" />
+        </div>
+        <div class="mb-3">
+          <button class="btn btn-danger" onclick="tinhLuong()">
+            Tính lương
           </button>
         </div>
         <div class="mb-3">
-          <div class="bg-secondary text-white soNguyenDuong py-2 px-2"></div>
+          <div class="bg-danger text-white soNgay py-2 px-2"></div>
         </div>
       </div>
       <!-- bai 2 -->
       <div class="container">
-        <h2>B2: Nhap so x,n. Tính tổng luỹ thừa</h2>
+        <h2>B2: Tính giá trị trung bình, nhập sau khi nhập vào 5 số thực</h2>
         <div class="mb-3">
-          <label for="nhapSoX" class="form-label">Nhập số x</label>
-          <input type="text" class="form-control" id="nhapSoX" />
+          <label for="soMot" class="form-label">Nhập số thực thứ nhất</label>
+          <input type="text" class="form-control" id="soMot" />
         </div>
         <div class="mb-3">
-          <label for="nhapSoN" class="form-label">Nhập số n (số mũ)</label>
-          <input type="text" class="form-control" id="nhapSoN" />
+          <label for="soHai" class="form-label">Nhập số thực thứ hai</label>
+          <input type="text" class="form-control" id="soHai" />
         </div>
         <div class="mb-3">
-          <button class="btn btn-primary" onclick="tinhTong()">
-            Tổng luỹ thừa
+          <label for="soBa" class="form-label">Nhập số thực thứ ba</label>
+          <input type="text" class="form-control" id="soBa" />
+        </div>
+        <div class="mb-3">
+          <label for="soBon" class="form-label">Nhập số thực thứ bốn</label>
+          <input type="text" class="form-control" id="soBon" />
+        </div>
+        <div class="mb-3">
+          <label for="soNam" class="form-label">Nhập số thực thứ năm</label>
+          <input type="text" class="form-control" id="soNam" />
+        </div>
+        <div class="mb-3">
+          <button class="btn btn-success" onclick="tinhGiaTriTrungBinh()">
+            Giá trị trung bình
           </button>
         </div>
         <div class="mb-3">
-          <div class="bg-success text-white tinhTong py-2 px-2"></div>
+          <div class="bg-success text-white giaTriTB py-2 px-2"></div>
         </div>
       </div>
-
       <!-- bai 3 -->
       <div class="container">
-        <h2>B3: Tính giai thừa</h2>
+        <h2>B3: Quy đổi tiền từ USD -> VND</h2>
         <div class="mb-3">
-          <label for="soN" class="form-label">Nhập số n</label>
-          <input type="text" class="form-control" id="soN" />
+          <label for="soTienUSD" class="form-label">Nhập số tiền USD</label>
+          <input type="text" class="form-control" id="soTienUSD" />
         </div>
         <div class="mb-3">
-          <button class="btn btn-danger" onclick="tinhGiaiThua()">Tính giai thừa</button>
+          <button class="btn btn-danger" onclick="quyDoiTien()">Quy đổi</button>
         </div>
         <div class="mb-3">
-          <div class="bg-danger text-white giaiThua py-2 px-2"></div>
+          <div class="bg-danger text-white quyDoi py-2 px-2"></div>
         </div>
       </div>
-
       <!-- bai 4 -->
       <div class="container">
-        <h2>B4: In 10 thẻ div</h2>
+        <h2>B4: Tính chu vi, diện tích HCN</h2>
         <div class="mb-3">
-          <button class="btn btn-primary" onclick="in10TheDiv()">
-            In thẻ div
+          <label for="dai" class="form-label">Nhập chiều dài</label>
+          <input type="text" class="form-control" id="dai" />
+        </div>
+        <div class="mb-3">
+          <label for="rong" class="form-label">Nhập chiều rộng</label>
+          <input type="text" class="form-control" id="rong" />
+        </div>
+        <div class="mb-3">
+          <button class="btn btn-light border-dark" onclick="chuViDienTich()">
+            Tính chu vi + Diện tích
           </button>
         </div>
         <div class="mb-3">
-          <div class=" text-white inTheDiv py-2 px-2"></div>
+          <div class="bg-light chuVi py-2 px-2"></div>
+        </div>
+        <div class="mb-3">
+          <div class="bg-light dienTich py-2 px-2"></div>
+        </div>
+      </div>
+      <!-- bai 5 -->
+      <div class="container">
+        <h2>B5: Nhập số có 2 chữ số => Tính tổng 2 chữ số đó</h2>
+        <div class="mb-3">
+          <label for="soHaiChu" class="form-label"
+            >Nhập số có hai chữ số (ví dụ: 22, 34, 57...)</label
+          >
+          <input type="text" class="form-control" id="soHaiChu" />
+        </div>
+        <div class="mb-3">
+          <button class="btn btn-primary" onclick="tongHaiChuSo()">
+            Tính tổng hai chữ số
+          </button>
+        </div>
+        <div class="mb-3">
+          <div class="bg-primary text-white tinhTong py-2 px-2"></div>
         </div>
       </div>
 
-       <!-- bai 5 -->
-       <div class="container">
-        <h2>B5: So nguyen to</h2>
-        <div class="mb-3">
-          <label for="giaiTriNhap" class="form-label">Nhập số n bất kỳ</label>
-          <input type="text" class="form-control" id="giaiTriNhap" />
-        </div>
-        <div class="mb-3">
-          <button class="btn btn-danger" onclick="inSoNguyenTo()">In số nguyên tố</button>
-        </div>
-        <div class="mb-3">
-          <div class="bg-light inSoNguyenTO py-2 px-2"></div>
-        </div>
-      </div>
-   
+      <!-- <div class="container while">
+    <h2>Bai 1: Quản lý tuyển sinh</h2>
+    <div class="mb-3">
+        <label for="">Diem chuan</label>
+        <input type="text" class="form-control" id="diemChuan">
+    </div>
+    <div class="mb-3">
+        <label for="">Chon khu vuc</label>
+        <input type="text" class="form-control" id="khuVuc">
+    </div>
+    <div class="mb-3">
+      <label for="">Chon doi tuong</label>
+      <input type="text" class="form-control" id="doiTuong">
+  </div>
+  <div class="mb-3">
+    <label for="">Chon mon 1</label>
+    <input type="text" class="form-control" id="mon1">
+</div>
+<div class="mb-3">
+  <label for="">Chon mon 2</label>
+  <input type="text" class="form-control" id="mon2">
+</div>
+<div class="mb-3">
+  <label for="">Chon mon 3</label>
+  <input type="text" class="form-control" id="mon3">
+</div>
+    <button class="btn btn-success" id="tinhTong" onclick="tinhDiemTuyenSinh()">Ket qua</button>
+    <div class="bg-success bg-opacity-75 p-2 text-white mt-3"></div>
+</div> -->
     </main>
     <footer>
       <!-- place footer here -->
